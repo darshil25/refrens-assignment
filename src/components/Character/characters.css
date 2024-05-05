@@ -1,0 +1,26 @@
+.characters-grid{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  margin: 15px;
+}
+.filter {
+  display: flex;
+  gap: 10px;
+  margin: 20px 20px 20px 0;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.filter input,
+.filter select {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #3c3f47; /* Lighter shade of your app's background color */
+  color: #fff; /* Changed text color to white for better contrast */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}

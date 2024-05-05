@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { useGetCharactersQuery } from '../../redux/Api/rickMortyApi';
-import Pagination from './reusable/Pagination';
-import Card from './reusable/Card';
+import { useGetCharactersQuery } from '../../../redux/Api/rickMortyApi';
+import CharacterCard from '../Cards/character/CharacterCard';
 import './characters.css';
-import Profile from './Profile';
+import Profile from '../Profile/Profile';
+import Pagination from '../pagination/Pagination';
 
 
 const Characters = () => {
@@ -62,7 +62,7 @@ const Characters = () => {
           ) :
             (<>
               <div className="filter">
-                <input type="text" name="search" value={search} onChange={handleSearchChange} placeholder="Search by name" />
+                <input type="text" name="search" value={search} onChange={handleSearchChange} placeholder="Search" />
                 <select name="category" value={selectedCategory} onChange={handleFilterChange}>
                   <option value="name">Name</option>
                   <option value="status">Status</option>
@@ -75,9 +75,9 @@ const Characters = () => {
                 {data.results.map((character) => {
                   console.log('Character ID:', character.id); // This will log the ID of the chara
                   return (
-                    <Card
+                    <CharacterCard
                       key={character.id}
-                      id = {character.id}
+                      id={character.id}
                       image={character.image}
                       name={character.name}
                       status={character.status}

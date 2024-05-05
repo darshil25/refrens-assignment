@@ -1,4 +1,5 @@
 import React from 'react'
+import './episodeCard.css'
 
 const EpisodeCard = ({name, airDate, episode}) => {
   return (

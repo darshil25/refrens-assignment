@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import './card.css'
+import './characterCard.css'
 
 const Card = ({ id, image, name, status, species, type, gender, location, onCardClick }) => {
   return (

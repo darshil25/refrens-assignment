@@ -23,6 +23,9 @@ export const rickMortyApi = createApi({
     getLocations: builder.query({
       query: () => '/location'
     }),
+    getLocation: builder.query({
+      query: (id) => `/location/${id}`
+    }),
     getEpisodes: builder.query({
       query: () => `/episode`
     }),
@@ -32,4 +35,4 @@ export const rickMortyApi = createApi({
   })
 })
 
-export const { useGetCharactersQuery, useGetProfileQuery, useGetLocationsQuery, useGetEpisodesQuery, useGetEpisodeQuery } = rickMortyApi;
+export const { useGetCharactersQuery, useGetProfileQuery, useGetLocationsQuery, useGetLocationQuery, useGetEpisodesQuery, useGetEpisodeQuery } = rickMortyApi;

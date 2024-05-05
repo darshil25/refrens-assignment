@@ -1,0 +1,43 @@
+.episode-card {
+  border: 3px solid #7abc6f;
+  padding: 10px;
+  margin: 10px 0px;
+  border-radius: 5px;
+  /* background-color: #f9f9f9; */
+  box-shadow: 1px 2px 3px #32AE8F;
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* height: 100px; */
+  /* overflow: hidden; */
+}
+
+.episode-card h3 {
+  font-size: 1rem;
+}
+
+.episode-card p {
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .episode-card h3 {
+    font-size: 0.9rem;
+  }
+
+  .episode-card p {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .episode-card h3{
+    font-size: 0.8rem;
+  }
+  
+.episode-card p{
+  font-size: 0.6rem;
+}
+}
