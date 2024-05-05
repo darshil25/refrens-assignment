@@ -15,16 +15,21 @@ const Profile = () => {
 
   const { data, error, isLoading } = useGetProfileQuery(id);
   const dispatch = useDispatch();
+
   const [episodes, setEpisodes] = useState([]);
   const [Location, setLocation] = useState([]);
   const [residents, setResidents] = useState([]);
 
+  // Fetch episodes and location data
   useEffect(() => {
     if (data) {
+      //first we get episodes ids
       const episodeIds = data.episode.map(url => url.split('/').pop());
+      //then we fetch episodes data
       Promise.all(episodeIds.map(id => dispatch(rickMortyApi.endpoints.getEpisode.initiate(id))))
         .then(episodes => setEpisodes(episodes.map(episode => episode.data)));
 
+        //repeated same process for location
       const locationId = data.location.url.split('/').pop();
       dispatch(rickMortyApi.endpoints.getLocation.initiate(locationId))
         .then(response => {
@@ -44,6 +49,8 @@ const Profile = () => {
   return (
     <>
     <div className='profile'>
+
+      {/* Profile details */}
       <div className='profile-details'>
         <div className='profile-image'>
           <img src={data.image} alt={data.name} />
@@ -64,6 +71,7 @@ const Profile = () => {
         </div>
       </div>
 
+      {/* Episodes */}
       <div className="episodes">
         <h2>Episodes:</h2>
         <div className="episode-data">
@@ -73,6 +81,7 @@ const Profile = () => {
         </div>
       </div>
 
+      {/* Location */}
       <div className="location-detail">
         <h2>Location:</h2>
         {Location && (
@@ -82,6 +91,7 @@ const Profile = () => {
             <p>Number of residents: <b>{Location.residents ? Location.residents.length : 0}</b></p>
           </div>
         )}
+        {/* Resident data */}
         <div className="resident-data">
           {residents.map((resident, index) => (
             resident && 

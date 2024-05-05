@@ -2,6 +2,8 @@ import PropTypes from 'prop-types';
 import './pagination.css'; // Import CSS file for styling
 
 const Pagination = ({ currentPage, totalPages, onPageChange }) => {
+
+  //Page change handlers
   const handlePrev = () => {
     onPageChange(currentPage - 1);
   };
@@ -20,6 +22,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
     onPageChange(pageNumber);
   };
 
+  //Render pagination buttons
   const renderPagination = () => {
     const pages = [];
 

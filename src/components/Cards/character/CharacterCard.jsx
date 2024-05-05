@@ -13,12 +13,14 @@ const Card = ({ id, image, name, status, species, type, gender, location, onCard
         <div className='details'>
           <h2 className="card-name">{name}</h2>
           <div className="sta_spe">
+            {/* added condition to display color Accordingly */}
             <span className={`dot ${status === 'Alive' ? 'green' : status === 'Dead' ? 'red' : 'gray'}`}></span>
             <p>{status} - {species} - {gender}</p>
           </div>
         </div>
 
         {/* character type*/}
+        {/* added condition to display type if available */}
         <div className={type ? 'type' : ''} style={type ? {} : { display: 'none' }}>
           <p className='cat'>Type</p>
           <p>{type}</p>
