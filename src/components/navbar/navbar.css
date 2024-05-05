@@ -18,3 +18,14 @@
 .nav-item:hover {
   color: #FFD700; /* gold text when hovering over a nav item */
 }
+
+@media (max-width: 767px) {
+  .navbar {
+    justify-content: center;
+  }
+}
+@media (max-width: 480px) {
+  .nav-item{
+    font-size: 0.8rem;
+  }
+}

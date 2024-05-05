@@ -133,11 +133,11 @@ h2{
   }
 
   h2 {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
 
   .profile-d p {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 
   .resident-data episode-data{
@@ -150,11 +150,11 @@ h2{
     padding: 10px;
   }
   h2{
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
   
 .profile-d p{
-  font-size: 0.6rem;
+  font-size: 0.8rem;
 }
 .resident-data episode-data{
   grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));

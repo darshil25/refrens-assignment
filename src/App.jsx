@@ -7,6 +7,7 @@ import Navbar from './components/navbar/Navbar';
 import Location from './components/Location/Location';
 import Profile from './components/Profile/Profile';
 import Episode from './components/Episode/Episode';
+import Footer from './components/Footer/Footer';
 
 function App() {
   
@@ -24,6 +25,7 @@ function App() {
           <Route path="/episode" element={<Episode />} />
           </Routes>
         </div>
+        <Footer />
         </Router>
     </Provider>
     </>

@@ -8,10 +8,9 @@
 .filter {
   display: flex;
   gap: 10px;
-  margin: 20px 20px 20px 0;
+  margin: 20px;
   justify-content: center;
   align-items: center;
-
 }
 
 .filter input,
@@ -23,4 +22,11 @@
   background-color: #3c3f47; /* Lighter shade of your app's background color */
   color: #fff; /* Changed text color to white for better contrast */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 479px) {
+  .filter input,
+  .filter select {
+    padding: 5px;
+    font-size: 14px;
+  }
 }
