@@ -1,5 +1,5 @@
-import React from 'react'
 import './episodeCard.css'
+import PropTypes from 'prop-types';
 
 const EpisodeCard = ({name, airDate, episode}) => {
   return (
@@ -10,5 +10,10 @@ const EpisodeCard = ({name, airDate, episode}) => {
     </div>
   )
 }
+EpisodeCard.propTypes = {
+  name: PropTypes.string.isRequired,
+  airDate: PropTypes.string.isRequired,
+  episode: PropTypes.string.isRequired,
+};
 
 export default EpisodeCard

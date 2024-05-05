@@ -1,5 +1,6 @@
-import React from 'react'
+
 import './residentCard.css'
+import PropTypes from 'prop-types';
 
 const ResidentCard = ({ name, image }) => {
 
@@ -10,5 +11,10 @@ const ResidentCard = ({ name, image }) => {
     </div>
   )
 }
+
+ResidentCard.propTypes = {
+  name: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+};
 
 export default ResidentCard

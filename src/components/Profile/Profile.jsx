@@ -1,27 +1,23 @@
-import React, { useEffect, useState } from 'react';
+import  { useEffect, useState } from 'react';
 import { useGetProfileQuery, rickMortyApi } from '../../../redux/Api/rickMortyApi';
 import { useDispatch } from 'react-redux';
 import './profile.css';
 import EpisodeCard from '../Cards/episode/EpisodeCard';
 import ResidentCard from '../Cards/resident/ResidentCard';
-// import ResidentCard from '../Cards/resident/ResidentCard';
+import Spinner from '../Spinner/Spinner';
+import { useLocation } from 'react-router-dom';
 
 
 
-const Profile = ({ id }) => {
+const Profile = () => {
+  const location = useLocation();
+  const id = location.state ? location.state.id : null;
+
   const { data, error, isLoading } = useGetProfileQuery(id);
   const dispatch = useDispatch();
   const [episodes, setEpisodes] = useState([]);
   const [Location, setLocation] = useState([]);
-  console.log("🚀 ~ Profile ~ episodes:", episodes)
   const [residents, setResidents] = useState([]);
-
-  // const ResidentCard = ({ name, image }) => (
-  //   <div className="resident-card">
-  //     <img src={image} alt={name} />
-  //     <p>{name}</p>
-  //   </div>
-  // );
 
   useEffect(() => {
     if (data) {
@@ -42,10 +38,11 @@ const Profile = ({ id }) => {
     }
   }, [data, dispatch]);
 
-  if (isLoading) return 'Loading...';
+  if (isLoading) return <Spinner />;
   if (error) return `Error: ${error.message}`;
 
   return (
+    <>
     <div className='profile'>
       <div className='profile-details'>
         <div className='profile-image'>
@@ -96,6 +93,8 @@ const Profile = ({ id }) => {
         </div>
       </div>
     </div>
+    </>
+    
   )
 }
 

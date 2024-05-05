@@ -1,0 +1,20 @@
+.navbar {
+  background-color: #2d323c; /* slightly lighter than #272B32 */
+  display: flex;
+  justify-content: flex-end;
+  padding: 15px;
+  gap: 35px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* subtle box shadow */
+}
+
+.nav-item {
+  color: #FFFFFF; /* white text to contrast with the dark background */
+  text-decoration: none;
+  background-color: transparent;
+  font-size: 1.2em;
+  transition: color 0.3s ease; /* smooth color transition on hover */
+}
+
+.nav-item:hover {
+  color: #FFD700; /* gold text when hovering over a nav item */
+}

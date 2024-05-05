@@ -1,13 +1,12 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Provider } from 'react-redux'
 import { store } from '../redux/store'
-import Characters from './components/Character/Characters'
+import Home from './components/Home/Home'
 import Navbar from './components/navbar/Navbar';
 import Location from './components/Location/Location';
+import Profile from './components/Profile/Profile';
+import Episode from './components/Episode/Episode';
 
 function App() {
   
@@ -19,10 +18,11 @@ function App() {
         <Navbar />
         <div className='main'>
           <Routes>
-          <Route path="/" element={<Characters />} />
-          <Route path="/location" element={<Location />} /> {/* Add a Route for the Location component */}
+          <Route path="/" element={<Home />} />
+          <Route path="/location" element={<Location />} />
+          <Route path="/profile/" element={<Profile />} />
+          <Route path="/episode" element={<Episode />} />
           </Routes>
-          
         </div>
         </Router>
     </Provider>
