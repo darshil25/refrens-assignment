@@ -1,0 +1,89 @@
+.card {
+  width: 85%;
+  /* height: 450px; */
+  cursor: pointer;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  /* overflow: hidden; */
+  margin: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.card-image {
+  padding: 15px;
+  align-items: center;
+  width: 90%;
+  min-height: 60%;
+  overflow: hidden;
+  border: none;
+  border-radius: 7%;
+}
+
+.card-content {
+  padding: 10px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.details{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+
+.card-name {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+
+.sta_spe {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+.dot{
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.red{
+  background-color: red;
+}
+.green{
+  background-color: green;
+}
+.gray{
+  background-color: gray;
+}
+
+.type{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.9em;
+  font-weight: 500;
+
+}
+.location{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.9em;
+  font-weight: 500;
+
+}
+.episode{
+  display: flex;
+  align-items: left;
+  gap: 5px;
+  flex-direction: column;
+}
+.cat{
+  color: #9E987F;
+}

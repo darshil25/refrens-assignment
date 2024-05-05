@@ -1,0 +1,19 @@
+.characters-grid{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin: 15px;
+}
+.filter {
+  display: flex;
+  gap: 10px;
+  margin:20px 20px 20px 0;
+  justify-content: end;
+}
+
+.filter input,
+.filter select {
+  padding: 5px;
+  font-size: 16px;
+}
