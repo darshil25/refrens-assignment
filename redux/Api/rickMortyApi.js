@@ -21,7 +21,7 @@ export const rickMortyApi = createApi({
       query: (id) => `/character/${id}`
     }),
     getLocations: builder.query({
-      query: () => '/location'
+      query: (page) => `/location?page=${page}`
     }),
     getLocation: builder.query({
       query: (id) => `/location/${id}`

@@ -8,6 +8,8 @@ import Location from './components/Location/Location';
 import Profile from './components/Profile/Profile';
 import Episode from './components/Episode/Episode';
 import Footer from './components/Footer/Footer';
+import LocationDetails from './components/Location/LocationDetails';
+import EpisodeDetails from './components/Episode/EpisodeDetails';
 
 function App() {
   
@@ -21,8 +23,10 @@ function App() {
           <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/location" element={<Location />} />
-          <Route path="/profile/" element={<Profile />} />
+          <Route path="/location-details" element={<LocationDetails />} />
+          <Route path="/profile" element={<Profile />} />
           <Route path="/episode" element={<Episode />} />
+          <Route path="/episode-details" element={<EpisodeDetails />} />
           </Routes>
         </div>
         <Footer />
