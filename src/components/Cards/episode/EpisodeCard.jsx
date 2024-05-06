@@ -1,9 +1,11 @@
 import './episodeCard.css'
 import PropTypes from 'prop-types';
 
-const EpisodeCard = ({name, airDate, episode}) => {
+const EpisodeCard = ({id, name, airDate, episode, onCardClick}) => {
   return (
-    <div className="episode-card">
+    <div className="episode-card" onClick={() => {
+      onCardClick(id);
+    }}>
       <h3>{name}</h3>
       <p>{airDate}</p>
       <p>{episode}</p>
