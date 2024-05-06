@@ -74,11 +74,10 @@ h2{
   display: flex;
   flex-direction: column;
   gap: 20px;
-
 }
 
 .episode-data {
-  height: 290px; /* Adjust this to the height you want */
+  height: auto; /* Adjust this to the height you want */
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   overflow-y: auto; /* This will add a scrollbar if the content overflows */
@@ -94,7 +93,7 @@ h2{
 }
 
 .resident-data{
-  height: 290px; /* Adjust this to the height you want */
+  height: auto; /* Adjust this to the height you want */
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   overflow-y: auto; /* This will add a scrollbar if the content overflows */
